@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "f6730602-e48e-49b5-8987-5cdad251c665",
+		"name": "WireMock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create_employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fio\": \"Иванов Ваня Иванович\",\r\n    \"position\" : \"Специалист по автоматизированному ПО\",\r\n    \"number\" : 12228\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8008/mock/create_employee",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"mock",
+						"create_employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8008/mock/get_employee",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"mock",
+						"get_employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8008/mock/delete_employee?id=1234542",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"mock",
+						"delete_employee"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1234542"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DownloadFile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8008/mock/downloadFile",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"mock",
+						"downloadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdminFiles",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/Anton/Downloads/exampleTestFile.txt"
+					}
+				},
+				"url": {
+					"raw": "localhost:8008/__admin/files/the-file-name.txt",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"__admin",
+						"files",
+						"the-file-name.txt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResourceXML",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "login",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<response>True</response>"
+				},
+				"url": {
+					"raw": "localhost:8008/mock/resource",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"mock",
+						"resource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResourceJson",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "login",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\" : \"I want to become master jedi\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8008/mock/resource",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"mock",
+						"resource"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
