@@ -1,0 +1,2 @@
+# WireMockEducation
+WireMock test project
