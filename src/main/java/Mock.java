@@ -59,7 +59,6 @@ class Mock {
                         .withStatus(200)
                         .withHeader("Content-Type", "text/xml")
                         .withBody("<response>Maybe try another header?</response>")));
-
         stubFor(post("/mock/resource")
                 .withHeader("Content-Type", equalTo("application/json"))
                 .withBasicAuth("login", "password")
