@@ -1,6 +1,6 @@
 # SampleMokService
 
-Добро пожаловать в демо проект мок-сервисов. В нем демонстрируется пример построения простого мок-сервиса с интеграцией необходимых зависимостей и примеры реализации простой автоматизации тестирования мок-сервиса на API с помощью Rest Assured/TestNG.
+Добро пожаловать в демо проект мок-сервисов. В нем демонстрируется пример построения простого мок-сервиса с интеграцией необходимых зависимостей/
 
 Для демонстрации механизмов мок-сервиса надо запустить mockService_jar. 
 
@@ -20,25 +20,8 @@
 ```
 
 
-Далее можно запускать автотесты
-
-```
-1. Открываем их в Intellij в модуле autotestsMock.
-2. Переходим в maven, выбираем профиль autotestsMock. Далее выбираем модуль autotestsMock-Lifecycle
-3. Запускаем автотесты нажатием на test.
-4. После прогона тестов открываем Plugins-allure. 
-5. Жмем allure:serve. 
-```
-
-
-У нас открывается отчет с результатами прогона автотестов на Mock
-
-
-
 Используемые фреймворки:
 - [WireMock](https://wiremock.org/docs/)
 - [Junit 4](https://wiremock.org/docs/junit-extensions/)
 - [JsonPath](https://www.baeldung.com/guide-to-jayway-jsonpath)
 - [jknack handlebars](https://github.com/jknack/handlebars.java)
-- [Rest assured](https://rest-assured.io/)
-- [TestNG + Allure](https://docs.qameta.io/allure-report/frameworks/java/testng)
